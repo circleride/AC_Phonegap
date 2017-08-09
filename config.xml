@@ -31,7 +31,7 @@
 <preference name="android-installLocation"    value="auto" />           <!-- android: app install location. 'auto' will choose. 'internalOnly' is device memory. 'preferExternal' is SDCard. -->
 <preference name="CameraUsesGeolocation" value="true" />
 <preference name="android-build-tool" value="gradle" />
-<preference name="SplashScreenDelay" value="100" />
+<preference name="SplashScreenDelay" value="1000" />
 <preference name="AllowInlineMediaPlayback" value="true"/>
 <preference name="MediaPlaybackRequiresUserAction" value="false"/>
 
