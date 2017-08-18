@@ -9,7 +9,7 @@
 <!--
 Soporte para IOS 7:
 <preference name="phonegap-version" value="cli-5.4.1" />
-
+<preference name="phonegap-version" value="cli-5.2.0" />
 <preference name="phonegap-version" value="cli-6.1.0" />
 <preference name="phonegap-version" value="cli-6.3.0" />
 <preference name="phonegap-version" value="cli-5.2.0" />
@@ -69,7 +69,7 @@ Soporte para IOS 7:
 </plugin>
 
 <!---<plugin name="com.phonegap.plugins.barcodescanner" />-->
-<gap:plugin name="phonegap-plugin-barcodescanner" source="npm" />
+<!-- <gap:plugin name="phonegap-plugin-barcodescanner" source="npm" /> -->
 
 <gap:plugin name="cordova-plugin-flashlight" source="npm" />
 <!-- <plugin name="cordova-plugin-health" source="npm" />
