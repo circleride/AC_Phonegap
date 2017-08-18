@@ -7,13 +7,15 @@
 
 <!-- content src="index.html"/ -->
 <!--
-<preference name="phonegap-version" value="cli-5.2.0" />
+Soporte para IOS 7:
+<preference name="phonegap-version" value="cli-5.4.1" />
+
 <preference name="phonegap-version" value="cli-6.1.0" />
 <preference name="phonegap-version" value="cli-6.3.0" />
 <preference name="phonegap-version" value="cli-5.2.0" />
 <preference name="phonegap-version" value="cli-6.0.0" />
 <preference name='phonegap-version' value='cli-7.0.1' />
-<preference name='pgb-builder-version' value='1' />
+<preference name='pgb-builder-version' value='2' />
 -->
 <preference name='phonegap-version' value='cli-6.1.0' />
 <preference name='pgb-builder-version' value='1' />
