@@ -16,8 +16,8 @@ Soporte para IOS 7:
 <preference name="phonegap-version" value="cli-6.0.0" />
 <preference name='phonegap-version' value='cli-7.0.1' />
 <preference name='pgb-builder-version' value='2' />
--->
 <preference name='phonegap-version' value='cli-5.4.1' />
+-->
 
 <preference name="DisallowOverscroll" value="true"/>
 <preference name="android-minSdkVersion" value="14"/>
@@ -62,14 +62,14 @@ Soporte para IOS 7:
 <plugin name="cordova-plugin-statusbar"/>
 <plugin name="cordova-plugin-vibration"/>
 
-<!-- <gap:plugin name="cordova-plugin-customurlscheme" source="npm"><param name="URL_SCHEME" value="alertaciudadana" /></gap:plugin> -->
+<gap:plugin name="cordova-plugin-customurlscheme" source="npm"><param name="URL_SCHEME" value="alertaciudadana" /></gap:plugin>
 
 <plugin name="phonegap-plugin-push" source="npm">
 <param name="SENDER_ID" value="930456109326" />
 </plugin>
 
 <!---<plugin name="com.phonegap.plugins.barcodescanner" />-->
-<!-- <gap:plugin name="phonegap-plugin-barcodescanner" source="npm" /> -->
+<gap:plugin name="phonegap-plugin-barcodescanner" source="npm" />
 
 <gap:plugin name="cordova-plugin-flashlight" source="npm" />
 <!-- <plugin name="cordova-plugin-health" source="npm" />
