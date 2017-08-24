@@ -141,12 +141,6 @@ jQuery(document).ready(function($) {
         } else {
         }
     });
-    window.plugins.imei.get(function (imei) {
-        window.localStorage.setItem("imei", imei);
-    }, function (error) {
-        window.localStorage.setItem("imei", "");
-        window.localStorage.setItem("imei_error", JSON.stringify(error));
-    });
 });
 
 var device = {};
