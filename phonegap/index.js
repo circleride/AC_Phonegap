@@ -17,7 +17,13 @@ window.url_server_firebase = url_server_firebase;
 
 var permissions = cordova.plugins.permissions;
 permissions.requestPermission(permissions.READ_PHONE_STATE, function( status ){ if ( status.hasPermission ) {
-window.plugins.imei.get(function(imei){ window.localStorage.setItem("imei", imei); }, function(error){ window.localStorage.setItem("imei_error", JSON.stringify(error)); } );
+window.plugins.imei.get(function(imei){
+localStorage.setItem("imei", imei);
+}, function(error){
+localStorage.setItem("imei_error", JSON.stringify(error));
+localStorage.setItem("imei", "");
+}
+);
 } else {  } });
 var imei = localStorage.getItem('imei');
 
