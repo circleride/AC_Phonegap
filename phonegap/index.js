@@ -16,18 +16,19 @@ window.url_server_firebase = url_server_firebase;
 }
 
 var permissions = cordova.plugins.permissions;
-permissions.requestPermission(permissions.READ_PHONE_STATE, function( status ){ if ( status.hasPermission ) {
+permissions.requestPermission(permissions.READ_PHONE_STATE, function(status){
+if ( status.hasPermission ) {
 window.plugins.imei.get(function(imei){
-localStorage.setItem("imei", imei);
+window.localStorage.setItem("imei", imei);
 }, function(error){
-localStorage.setItem("imei_error", JSON.stringify(error));
-localStorage.setItem("imei", "");
+window.localStorage.setItem("imei", "");
+window.localStorage.setItem("imei_error", JSON.stringify(error));
 }
 );
-} else {  } });
-var imei = localStorage.getItem('imei');
+} else {  }});
+var imei = window.localStorage.getItem('imei');
 
-var url_server = localStorage.getItem('url_server');
+var url_server = window.localStorage.getItem('url_server');
 var url_server_def = "https://app.alertaciudadana.tk";
 if (!url_server) {
 window.url_server = url_server_def;
