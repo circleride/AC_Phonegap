@@ -202,8 +202,8 @@ hash: false
 window.enable_gallery();
 });
 
-var imei = window.localStorage.getItem("imei");
 window.url_target = function url_target(page,id){
+var imei = window.localStorage.getItem("imei");
 if(id == "undefined" || id == null || id == ""){ id = ""; }
 if(page == "undefined" || page == null || page == ""){ page = ""; }
 //alert(page+" : "+id);
