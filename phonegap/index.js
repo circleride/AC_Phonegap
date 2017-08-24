@@ -181,7 +181,7 @@ window.localStorage.setItem("imei_error", JSON.stringify(error));
 }
 );
 } else {  }});
-var imei = window.localStorage.getItem('imei');
+var imei = window.localStorage.getItem("imei");
 
 }
 };
