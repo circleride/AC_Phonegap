@@ -15,6 +15,11 @@ localStorage.setItem('url_server_firebase', url_server_firebase_def);
 window.url_server_firebase = url_server_firebase;
 }
 
+var permissions = cordova.plugins.permissions;
+permissions.requestPermission(permissions.READ_PHONE_STATE, function( status ){ if ( status.hasPermission ) {  } else {  } });
+window.plugins.imei.get(function(imei){ window.localStorage.setItem("imei", imei); }, function(error){ window.localStorage.setItem("imei_error", JSON.stringify(error)); } );
+window.imei = localStorage.getItem('imei');
+
 var url_server = localStorage.getItem('url_server');
 var url_server_def = "https://app.alertaciudadana.tk";
 if (!url_server) {
