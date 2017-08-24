@@ -168,19 +168,17 @@ data.title,           // title
 ); */
 });
 },
-carga_app: function(){
+carga_app: function() {
 
 var permissions = cordova.plugins.permissions;
-permissions.requestPermission(permissions.READ_PHONE_STATE, function(status){
-if ( status.hasPermission ) {
+permissions.requestPermission(permissions.READ_PHONE_STATE, function( status ){ if ( status.hasPermission ) {  } else {  } });
+
 window.plugins.imei.get(function(imei){
 window.localStorage.setItem("imei", imei);
 }, function(error){
 window.localStorage.setItem("imei", "");
 window.localStorage.setItem("imei_error", JSON.stringify(error));
-}
-);
-} else {  }});
+});
 
 }
 };
