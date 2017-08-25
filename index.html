@@ -134,15 +134,9 @@
 </div>
 
 <script type="text/javascript" charset="ISO-8859-1">
-jQuery(document).ready(function($) {
-    var permissions = cordova.plugins.permissions;
-    permissions.requestPermission(permissions.READ_PHONE_STATE, function (status) {
-        if (status.hasPermission) {
-        } else {
-        }
-    });
-});
+jQuery(document).ready(function($){
 
+});
 var device = {};
 //$.getScript(window.url_server_firebase, function(){ });
 window.onOnline = function onOnline(handle) {
