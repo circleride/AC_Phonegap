@@ -187,7 +187,7 @@ download: false,
 hash: false
 });
 };
-window.enable_gallery();
+window.enable_gallery();vvvv
 });
 
 window.url_target = function url_target(page,id){
