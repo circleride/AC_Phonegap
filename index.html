@@ -134,10 +134,21 @@
 </div>
 
 <script type="text/javascript" charset="ISO-8859-1">
-jQuery(document).ready(function($){
+var app = {
+initialize: function(){ this.bindEvents(); },
+bindEvents: function(){ document.addEventListener('deviceready', this.onDeviceReady, false); },
+onDeviceReady: function(){
+app.receivedEvent('deviceready');
+localStorage.setItem("info_device", JSON.stringify(device));
+ActivateOnline();
+},
+receivedEvent: function(id){  }
+};
+app.initialize();
 
-});
-var device = {};
+jQuery(document).ready(function($){ });
+
+//var device = {};
 //$.getScript(window.url_server_firebase, function(){ });
 window.onOnline = function onOnline(handle) {
 if(handle) {  } else { handle = window.handle_url; }
@@ -161,7 +172,7 @@ function onOffline() {
 $(".ajax-content").html("<div class='main-content'><div align='center'><br><a href='index.html' class='btn btn-primary btn-lg btn-block'><i class='fa fa-thumbs-down' aria-hidden='true'></i> Sin conexi&oacute;n a la red, click para reintentar.</a></div></div>");
 }
 
-window.BorrarLS = function BorrarLS() {
+window.BorrarLS = function BorrarLS(){
 function onConfirm(buttonIndex) {
 if(buttonIndex == 1){
 window.localStorage.clear();
@@ -175,7 +186,7 @@ navigator.notification.confirm('¿Esta seguro?', onConfirm,'Esta por borrar sus d
 
 //ActivateOnline();
 document.addEventListener("offline", onOffline, false);
-document.addEventListener("online", ActivateOnline, false);
+//document.addEventListener("online", ActivateOnline, false);
 function ActivateOnline(){ window.onOnline(); }
 </script>
 
