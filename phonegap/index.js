@@ -101,7 +101,7 @@ $(".User_Lon_print").html(Lon);
 }*/
 
 window.handle_url = "";
-function handleOpenURL(url) {
+function handleOpenURL(url){
 setTimeout(function() {
 //alert("Recibido: " + url);
 window.handle_url = url;
@@ -109,6 +109,7 @@ window.onOnline(url);
 }, 0);
 }
 
+/*
 var app = {
 initialize: function() {
 this.bindEvents();
@@ -134,7 +135,6 @@ clearBadge: "true"
 },
 "windows": {}
 });
-
 push.on('registration', function(data) {
 //alert(JSON.stringify("reg: "+data));
 //$("#info_device").append(JSON.stringify(data));
@@ -144,14 +144,12 @@ if (oldRegId !== data.registrationId) {
 localStorage.setItem('registrationId', data.registrationId);
 window.localStorage.setItem("token_push", JSON.stringify(data));
 }
-
 });
 push.on('error', function(e) {
 //alert(JSON.stringify("error: "+e));
 //$("#info_device").append(JSON.stringify(e));
 //window.localStorage.setItem("token_push", JSON.stringify(e));
 });
-
 push.on('notification', function(data) {
 //$("#info_device").append(JSON.stringify(data));
 //window.localStorage.setItem("token_push", JSON.stringify(data));
@@ -160,20 +158,18 @@ window.GetPushNotif(data);
 } else {
 window.GetPushNotif = data;
 }
+});
+},
+carga_app: function(){  }
+}; */
+//app.initialize();
+
 /* navigator.notification.alert(
 data.message,         // message
 null,                 // callback
 data.title,           // title
 'Ok'                  // buttonName
 ); */
-});
-},
-carga_app: function() {
-
-}
-};
-
-app.initialize();
 
 jQuery(document).ready(function($){
 window.enable_gallery = function enable_gallery(class_lg){
