@@ -3,20 +3,9 @@
 <widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="tk.alertaciudadana.app" version="1.0.0">
 <name>Alerta Ciudadana</name>
 <description>tk.alertaciudadana.app</description>
-<author href="http://app.alertaciudadana.tk" email="soporte@alertaciudadana.tk">Alerta Ciudadana</author>
+<author href="http://app.alerta.xyz" email="soporte@alerta.xyz">Alerta Ciudadana</author>
 
-<!-- content src="index.html"/ -->
-<!--
-<preference name="phonegap-version" value="cli-5.2.0" />
-<preference name="phonegap-version" value="cli-6.1.0" />
-<preference name="phonegap-version" value="cli-6.3.0" />
-<preference name="phonegap-version" value="cli-5.2.0" />
-<preference name="phonegap-version" value="cli-6.0.0" />
-<preference name='phonegap-version' value='cli-7.0.1' />
-<preference name='pgb-builder-version' value='2' />
-<preference name='phonegap-version' value='cli-6.5.0' />
--->
-
+<preference name="phonegap-version" value="cli-7.1.0" />
 <preference name="DisallowOverscroll" value="true"/>
 <preference name="android-minSdkVersion" value="14"/>
 <preference name="permissions"                value="none"/>
@@ -48,9 +37,11 @@
 <plugin name="cordova-plugin-device-motion" />
 <plugin name="cordova-plugin-device-orientation" />
 <plugin name="cordova-plugin-dialogs" />
-<plugin name="cordova-plugin-file" />
-<plugin name="cordova-plugin-file-transfer" />
-<plugin name="cordova-plugin-geolocation" />
+<plugin name="cordova-plugin-file-transfer" spec="~1.7.1" />
+<plugin name="cordova-plugin-file" source="npm" spec="~5.0.0" />
+<plugin name="cordova-plugin-geolocation">
+<variable name="GEOLOCATION_USAGE_DESCRIPTION" value="Posicionamiento en el Mapa" />
+</plugin>
 <plugin name="cordova-plugin-globalization" />
 <plugin name="cordova-plugin-inappbrowser" />
 <plugin name="cordova-plugin-media" />
@@ -66,9 +57,15 @@
 <param name="URL_SCHEME" value="alertaciudadana" />
 </gap:plugin>
 
-<plugin name="phonegap-plugin-push" source="npm">
-<param name="SENDER_ID" value="930456109326" />
+<plugin name="phonegap-plugin-push" source="npm" spec="~2.0.0">
+<param name="SENDER_ID" value="2640760039" />
 </plugin>
+<platform name="android">
+<resource-file src="google-services.json" target="google-services.json" />
+</platform>
+<platform name="ios">
+<resource-file src="GoogleService-Info.plist" target="GoogleService-Info.plist" />
+</platform>
 
 <!---<plugin name="com.phonegap.plugins.barcodescanner" />-->
 <gap:plugin name="phonegap-plugin-barcodescanner" source="npm" />
